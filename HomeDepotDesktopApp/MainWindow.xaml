@@ -1,0 +1,16 @@
+﻿<Window x:Class="HomeDepotDesktopApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeDepotDesktopApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="509.353" Width="818.621">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Height="40" VerticalAlignment="Top">
+            <Button Content="Customer" MinWidth="100" Click="CustomerClick"/>
+            <Button Content="Create Customer" MinWidth="100" Click="CreateCustomerClick"/>
+        </StackPanel>
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿
+@model HomeDepotWebApp.ViewModels.BookingsViewModel
+@{
+    ViewBag.Title = "ViewBooking";
+        if (Session["user"] == null)
+    {
+        Response.Redirect("~/Login/login");
+    }
+}
+    <ul>
+        @if (Model.bookings!=null)
+        {
+           foreach (var booking in Model.bookings)
+            {
+                <li>
+                    @booking
+                </li>
+            }
+        }
+
+    </ul>

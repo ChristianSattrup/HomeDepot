@@ -1,0 +1,22 @@
+﻿@model HomeDepotWebApp.ViewModels.CreateBookingViewModel
+@{
+    ViewBag.Title = "CreateForm";
+    if (Session["user"] == null)
+    {
+        Response.Redirect("~/Login/login");
+    }
+}
+
+    <div>
+        @using (Html.BeginForm("Create", "Booking"))
+        {
+            <label>Tool</label>
+            @Html.DropDownListFor(model => model.SelectedValue, Model.SelectList)
+            <label>Pick up date</label>
+            @Html.EditorFor(model => model.PickUpDate)
+            <label>Days</label>
+            @Html.EditorFor(model => model.Days)
+
+            <input type="submit" value="Create" />
+        }
+    </div>
